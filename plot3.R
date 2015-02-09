@@ -1,4 +1,4 @@
-filename <- "household_power_consumption.txt"
+filename <- "C:/Users/fref/Documents/household_power_consumption.txt"
 data <- read.table(filename,
                    header = TRUE,
                    sep = ";",
@@ -13,7 +13,7 @@ attach(newData)
 x <- paste(Date, Time)
 newData$DateTime <- strptime(x, "%d/%m/%Y %H:%M:%S")
 rownames(newData) <- 1:nrow(newData)
-dim(newData) # 2880   10
+dim(newData) 
 attach(newData)
 png(filename = "plot3.png", 
     width = 480, height = 480,
